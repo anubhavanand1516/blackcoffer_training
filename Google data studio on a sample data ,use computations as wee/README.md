@@ -8,94 +8,7 @@ The dataset contains sales transaction records, including financial metrics, pro
 
 To load the dataset in Python:
 
-```python
-i
-```
-
-import pandas as pd
-
-
-
-\# Load the Excel file
-
-df = pd.read\_excel("Sales.xlsx")
-
-
-
-\# Total Sales, Profit, and Cost of Sales
-
-total\_sales = df["Sales"].sum()
-
-total\_profit = df["Profit"].sum()
-
-total\_cost\_of\_sales = df["Cost of Sales"].sum()
-
-
-
-\# Top performing countries by profit
-
-top\_countries = df.groupby("Country")["Profit"].sum().nlargest(5)
-
-
-
-\# Best-selling products
-
-top\_products = df.groupby("Product Name")["Order Qty"].sum().nlargest(5)
-
-
-
-\# Most profitable promotions
-
-top\_promotions = df.groupby("Promotion Name")["Profit"].sum().nlargest(5)
-
-
-
-\# Compute average unit cost and price
-
-average\_unit\_cost = df["Unit Cost"].mean()
-
-average\_price = df["Price"].mean()
-
-
-
-\# Prepare computed insights
-
-computed\_insights = {
-
-&#x20;   "Total Sales": total\_sales,
-
-&#x20;   "Total Profit": total\_profit,
-
-&#x20;   "Total Cost of Sales": total\_cost\_of\_sales,
-
-&#x20;   "Average Unit Cost": average\_unit\_cost,
-
-&#x20;   "Average Price": average\_price,
-
-&#x20;   "Top Countries by Profit": top\_countries.to\_dict(),
-
-&#x20;   "Top Selling Products": top\_products.to\_dict(),
-
-&#x20;   "Most Profitable Promotions": top\_promotions.to\_dict(),
-
-}
-
-
-
-computed\_insights
-
-
-
-To load the dataset into a SQL database:
-
-```python
-from sqlalchemy import create_engine
-
-# Create a database connection (modify with your DB credentials)
-engine = create_engine("sqlite:///sales_data.db")
-
-df.to_sql("sales_data", con=engine, if_exists="replace", index=False)
-```
+<img width="352" alt="Screenshot 2025-03-08 at 10 31 34 AM" src="https://github.com/user-attachments/assets/e3664935-1e05-48b4-b4b0-790c76093c5d" />
 
 ## 3. Column Descriptions
 
@@ -162,52 +75,8 @@ df.to_sql("sales_data", con=engine, if_exists="replace", index=False)
 4. **North America Spring Promotion**: \$3.56M
 5. **Asian Holiday Promotion**: \$2.08M
 
-## 5. Data Usage & Analysis Guide
+## 5. **Sales Analytics Dashboard** using Google Looker Studio
+live link->https://lookerstudio.google.com/reporting/27a8ced6-ecb7-4839-8493-5a01550c0c28
 
-### Key Insights & Metrics:
 
-- **Profitability Analysis**: Compute total profit by product, category, or region.
-- **Sales Trends**: Analyze revenue trends over time.
-- **Regional Performance**: Compare sales across different locations.
-- **Promotion Effectiveness**: Assess how promotions impact sales and profitability.
-
-### Sample Queries:
-
-1. **Total Sales and Profit by Country**
-
-   ```sql
-   SELECT Country, SUM(Sales) AS Total_Sales, SUM(Profit) AS Total_Profit
-   FROM sales_data
-   GROUP BY Country
-   ORDER BY Total_Profit DESC;
-   ```
-
-2. **Top 5 Best-Selling Products**
-
-   ```sql
-   SELECT Product_Name, SUM(Order_Qty) AS Total_Units_Sold
-   FROM sales_data
-   GROUP BY Product_Name
-   ORDER BY Total_Units_Sold DESC
-   LIMIT 5;
-   ```
-
-3. **Promotion Impact on Sales**
-
-   ```sql
-   SELECT Promotion_Name, SUM(Sales) AS Total_Sales, SUM(Profit) AS Total_Profit
-   FROM sales_data
-   GROUP BY Promotion_Name
-   ORDER BY Total_Sales DESC;
-   ```
-
-## 6. Additional Notes
-
-- Data can be used to build a **Sales Analytics Dashboard** in Google Looker Studio or Power BI.
-- Ensure data consistency and handle missing values before performing deep analysis.
-- Future improvements may include customer segmentation and demand forecasting.
-
----
-
-*End of Documentation*
 
