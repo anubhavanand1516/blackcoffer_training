@@ -29,6 +29,9 @@ This is a simple Flask application with a structured setup.
    ```
    http://127.0.0.1:5000/
    ```
+   <img width="466" alt="Screenshot 2025-03-15 at 3 05 46 PM" src="https://github.com/user-attachments/assets/17ad90b2-a673-400f-ba51-91a711bd51c1" />
+
+   
 
 ## Folder Structure
 ```
