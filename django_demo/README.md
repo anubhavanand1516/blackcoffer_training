@@ -103,5 +103,9 @@ python manage.py runserver
 
 ## 🌐 Access the App
 - **Home Page**: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-- **Admin Panel**: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (Login using superuser credentials)
+  <img width="364" alt="Screenshot 2025-03-15 at 3 59 27 PM" src="https://github.com/user-attachments/assets/c2e936eb-ca7e-41d4-962b-e99c7faea13d" />
+  
+- **Admin Panel**: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (Login using superuser credentials)<img width="1440" alt="Screenshot 2025-03-15 at 3 59 57 PM" src="https://github.com/user-attachments/assets/7888b454-0792-4bcb-b1ff-b43bd6e992e4" />
+
+  
 
