@@ -35,7 +35,7 @@ git clone https://github.com/anubhavanand1516/django_demo.git
 cd django_demo_app
 ```
 
-### 2️⃣ Create a Virtual Environment (Optional but Recommended)
+### 2️⃣ Create a Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate 
