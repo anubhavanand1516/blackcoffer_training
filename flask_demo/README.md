@@ -35,18 +35,12 @@ This is a simple Flask application with a structured setup.
 
 ## Folder Structure
 ```
-flask_demo_app/
+flask_demo/
 │── main.py                # Main Flask application
 │── requirements.txt       # Dependencies (Flask, etc.)
 │── README.md             # Project documentation
 │── templates/
 │   └── index.html         # HTML template for the homepage
-│── static/
-│   ├── css/
-│   │   └── style.css      # Stylesheets
-│   ├── js/
-│   │   └── script.js      # JavaScript files
-│   └── images/            # Images (if needed)
 ```
 
 ## API Endpoints
