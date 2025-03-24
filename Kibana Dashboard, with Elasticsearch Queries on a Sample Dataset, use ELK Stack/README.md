@@ -1,7 +1,7 @@
-# Elasticsearch Beginner Commands
+# Elasticsearch Commands
 
-This document contains essential Elasticsearch commands for beginners. These commands can be executed using **Kibana's Dev Tools** 
-
+ These commands can be executed using **Kibana's Dev Tools** 
+ 
 ---
 
 ## **1. Setup & Basic Commands**
