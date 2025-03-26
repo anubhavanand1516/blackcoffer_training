@@ -60,6 +60,6 @@ This Retool application is a customizable order management dashboard that displa
 ## Screenshots
 <img width="1440" alt="Screenshot 2025-03-26 at 11 41 44 PM" src="https://github.com/user-attachments/assets/b3482379-0aed-4b67-80a5-811587928a3e" />
 
-## For live link
+## For live demo
 go to https://anandanubhav1516.retool.com/editor/6a886adc-0a65-11f0-ae11-b3f7d11ce3f2/new_poject/page1
 
