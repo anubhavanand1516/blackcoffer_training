@@ -49,6 +49,10 @@ def lambda_handler(event, context):
 ```
 <img width="1440" alt="Screenshot 2025-03-27 at 6 57 40 PM" src="https://github.com/user-attachments/assets/edb63ff0-495d-4c32-86b0-c35a75cf9636" />
 
+<img width="1440" alt="Screenshot 2025-03-27 at 6 59 26 PM" src="https://github.com/user-attachments/assets/a28461f9-47f8-4769-bf18-f551da466b6f" />
+
+
+
 
 ## Deployment Steps
 1. Upload the Python script to AWS Lambda.
