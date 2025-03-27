@@ -1,107 +1,43 @@
-# Django Demo App
+# Netflix Titles Analysis - Amazon QuickSight Dashboard
 
-## 🚀 Introduction
-This is a simple Django web application with a modular structure. It includes an example `tasks` app that demonstrates basic routing, views, and URL mapping.
+## Overview
+This project involves analyzing the Netflix titles dataset using **Amazon QuickSight** to gain insights into content trends, release patterns, and distribution over time. The dashboard visualizes key metrics such as:
+- Number of titles released per year
+- Distribution of titles by type (Movies, TV Shows, Others)
+- Frequency of content additions to Netflix
 
-## 📁 Project Structure
-```
-django_demo/
-│── django_demo/
-│   │── __init__.py
-│   │── settings.py
-│   │── urls.py
-│   │── wsgi.py
-│
-│── tasks/
-│   │── migrations/
-│   │── __init__.py
-│   │── admin.py
-│   │── apps.py
-│   │── models.py
-│   │── tests.py
-│   │── views.py
-│   │── urls.py
-│
-│── manage.py
-│── requirements.txt
-│── README.md
-```
+## Dataset
+- **File Name:** `netflix_titles.csv`
+- **Source:** Netflix dataset containing information about movies and TV shows available on the platform.
+- **Key Columns Used:**
+  - `release_year`: Year when the title was released
+  - `type`: Type of content (Movie, TV Show, Other)
+  - `date_added`: Date when the title was added to Netflix
 
-## 🛠 Installation & Setup
+## Visualizations
+### 1. **Count of Records by Release Year**
+   - A donut chart displaying the distribution of Netflix titles by release year.
+   - Shows the top 20 most frequent release years.
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/anubhavanand1516/django_demo.git
-cd django_demo_app
-```
+### 2. **Count of Records by Release Year and Type**
+   - A horizontal bar chart that categorizes movies, TV shows, and others by their release year.
+   - Highlights trends in content type distribution over time.
 
-### 2️⃣ Create a Virtual Environment (Optional but Recommended)
-```bash
-python -m venv venv
-source venv/bin/activate 
-```
+### 3. **Count of Titles by Date Added**
+   - A bar chart representing the number of titles added to Netflix on specific dates.
+   - Helps track content availability trends on the platform.
 
-### 3️⃣ Install Dependencies
-```bash
-pip install django
-```
+## How to Use
+1. Open **Amazon QuickSight** and import `netflix_titles.csv`.
+2. Create a new analysis and add relevant charts:
+   - Donut chart for release year distribution.
+   - Bar charts for content type and date trends.
+3. Customize filters, colors, and labels for better clarity.
+4. Export the final dashboard for reporting and insights.
 
-### 4️⃣ Create a Django App
-```bash
-python manage.py startapp tasks
-```
+## Insights
+- Most Netflix titles were released in recent years (2018-2021 being dominant).
+- Movies outnumber TV shows in most release years.
+- A significant number of titles were added to Netflix in batches on specific dates.
 
-### 5️⃣ Register the App
-Edit `settings.py` and add `'tasks'` to `INSTALLED_APPS`.
-
-### 6️⃣ Define URLs
-- Create `tasks/urls.py` and add:
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('', views.home, name='home'),
-]
-```
-
-- Update `django_demo_app/urls.py`:
-```python
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('tasks.urls')),
-]
-```
-
-### 7️⃣ Create a Simple View
-Edit `tasks/views.py`:
-```python
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("Welcome to the Tasks App!")
-```
-
-### 8️⃣ Run Migrations
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-### 9️⃣ Create a Superuser (For Admin Panel)
-```bash
-python manage.py createsuperuser
-```
-
-### 🔟 Run the Server
-```bash
-python manage.py runserver
-```
-
-## 🌐 Access the App
-- **Home Page**: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-- **Admin Panel**: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (Login using superuser credentials)
 
